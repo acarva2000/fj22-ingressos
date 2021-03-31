@@ -150,4 +150,11 @@
         </plugins>
     </build>
 
+ <developers>
+									<developer>
+													<name>Anderson Carvalho</name>
+													<email>acarva2000@gmail.com</email>
+									</developer>
+					</developers>
+
 </project>
