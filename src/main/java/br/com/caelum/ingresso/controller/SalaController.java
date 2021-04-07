@@ -17,8 +17,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.com.caelum.ingresso.dao.SalaDao;
 import br.com.caelum.ingresso.dao.SessaoDao;
+import br.com.caelum.ingresso.model.ImagemCapa;
 import br.com.caelum.ingresso.model.Sala;
+import br.com.caelum.ingresso.model.Sessao;
 import br.com.caelum.ingresso.model.form.SalaForm;
+import br.com.caelum.ingresso.rest.OmdbClient;
 
 /**
  * Created by nando on 03/03/17.
@@ -31,6 +34,9 @@ public class SalaController {
 
 	@Autowired
 	private SalaDao salaDao;
+	
+	@Autowired
+	private OmdbClient client;
 
 	@GetMapping({ "/admin/sala", "/admin/sala/{id}" })
 	public ModelAndView form(@PathVariable("id") Optional<Integer> id, SalaForm salaForm) {
